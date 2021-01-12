@@ -1,13 +1,30 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+.container {
+    background-color: coral;
+    height: 615px;
+    width: 228px;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.greyOn {
+    border-radius: 50%;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 5px;
+}
 
-*/
+.greyOn .redOn {
+    color: red;
+    box-shadow: 20px 20px 50px 10px lightcoral;
+}
+
+.greyOn .yellowOn {
+    color: yellow;
+    box-shadow: 20px 20px 50px 10px rgb(247, 247, 19);
+}
+
+.greyOn .greenOn {
+    color: green;
+    box-shadow: 20px 20px 50px 10px lightgreen;
+}
