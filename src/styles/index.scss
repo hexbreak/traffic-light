@@ -1,12 +1,52 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-.container {
-    background-color: coral;
-    height: 615px;
-    width: 228px;
+.trafficLight {
+    background: black;
+    height: 415px;
+    width: 200px;
+    padding-left: 2rem;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 10px 10px 5px darkslategrey; 
 }
 
-.greyOn {
+.trafficLight div {
+    height: 130px;
+    width: 140px;
+    padding-left: 4em;
+    padding-top: 5em;
+}
+
+.greyLight {
+    border-radius: 50%;
+    background: lightgray;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.redLight {
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 20px 20px 50px 10px lightcoral;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.yellowLight {
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 20px 20px 50px 10px yellowgreen;
+    margin-bottom: 5px;
+}
+
+.greenLight {
+    background-color: green;
+    border-radius: 50%;
+    box-shadow: 20px 20px 50px 10px lightgreen;
+    margin-bottom: 5px;
+}
+
+/*
+.greyLight {
     border-radius: 50%;
     border: 2px solid black;
     height: 200px;
@@ -14,17 +54,18 @@
     margin-bottom: 5px;
 }
 
-.redOn {
+.redLight {
     color: red;
     box-shadow: 20px 20px 50px 10px lightcoral;
 }
 
-.yellowOn {
+.yellowlight {
     color: yellow;
     box-shadow: 20px 20px 50px 10px rgb(247, 247, 19);
 }
 
-.greenOn {
+.greenLight {
     color: green;
     box-shadow: 20px 20px 50px 10px lightgreen;
 }
+*/

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
@@ -6,20 +6,34 @@ import rigoImage from "../../img/rigo-baby.jpg";
 //create your first component
 export const TrafficLight = () => {
 	const [color, setColor] = useState("");
-
+	useEffect(
+		() => {
+			const interval = setInterval(() => {
+				color === "red"
+					? setColor("green")
+					: color === "yellow"
+						? setColor("red")
+						: color === "green"
+							? setColor("yellow")
+							: null;
+			}, 1000);
+			return () => clearInterval(interval);
+		},
+		[color]
+	);
 	return (
-		<div className="trafficStop">
-			<div className="container">
+		<div className="container d-flex justify-content-center pt-5">
+			<div className="trafficLight">
 				<div
-					className={color === "red" ? "redOn" : "greyOn"}
+					className={color === "red" ? "redLight" : "greyLight"}
 					onClick={() => setColor("red")}
 				/>
 				<div
-					className={color === "yellow" ? "yellowOn" : "greyOn"}
+					className={color === "yellow" ? "yellowLight" : "greyLight"}
 					onClick={() => setColor("yellow")}
 				/>
 				<div
-					className={color === "green" ? "greenOn" : "greyOn"}
+					className={color === "green" ? "greenLight" : "greyLight"}
 					onCLick={() => setColor("green")}
 				/>
 			</div>
