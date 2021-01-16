@@ -34,7 +34,7 @@ export const TrafficLight = () => {
 				/>
 				<div
 					className={color === "green" ? "greenLight" : "greyLight"}
-					onCLick={() => setColor("green")}
+					onClick={() => setColor("green")}
 				/>
 			</div>
 		</div>
